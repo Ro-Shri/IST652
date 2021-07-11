@@ -1,0 +1,33 @@
+stock = {"banana": 6, "apple": 0, "orange": 32, "pear": 15}
+prices = {"banana": 4, "apple": 2, "orange": 1.5, "pear": 3}
+
+print("The value for orange is",stock.get("orange"))
+stock["cherry"]=28
+
+for item in stock:
+    print(item,":", stock[item])
+
+groceries = ["apple", "banana", "pear"]
+
+sum = 0
+for item in groceries:
+    if item in stock:
+        add = stock[item]
+        sum = sum+add
+print("Total in stock is",sum)
+
+total=0
+for item in stock:
+    if item in prices:
+        total = total + (stock[item] * prices[item])
+print("Total value of items in stock is", format(total, ".2f"),"dollars")
+
+#######OUTPUT##########
+The value for orange is 32
+banana : 6
+apple : 0
+orange : 32
+pear : 15
+cherry : 28
+Total in stock is 21
+Total value of items in stock is 117.00 dollars

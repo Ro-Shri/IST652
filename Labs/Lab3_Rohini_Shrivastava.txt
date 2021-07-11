@@ -1,0 +1,40 @@
+#PROBLEM 1#
+def multiply(lists):
+    total = 1
+    for item in lists:
+        total= total*item
+    return total
+
+list1 = [8, 2, 3, -1, 7]
+list2 = [8, 8, 5, 1, 12]
+list3 = [35, 32, 1, -6, -7]
+print(multiply(list1))
+print(multiply(list2))
+print(multiply(list3))
+#OUTPUT
+#-336
+#3840
+#47040
+
+##PROBLEM 2#
+def case_sensitive(strings):
+    lower = 0
+    upper = 0
+    for char in range(0,len(strings)):
+        if strings[char].isupper() == True:
+            upper = upper+1
+       elif strings[char].islower() == True:
+            lower = lower + 1
+    print('number of uppercase:', upper,"number of lowercase:", lower)
+
+first = 'The quick Brown Fox'
+hello_world = 'Hello World'
+second = 'This is the THIRD sentence'
+case_sensitive(first)
+case_sensitive(hello_world)
+case_sensitive(second)
+
+#OUTPUT
+#number of uppercase: 3 number of lowercase: 13
+#number of uppercase: 2 number of lowercase: 8
+#number of uppercase: 6 number of lowercase: 16
